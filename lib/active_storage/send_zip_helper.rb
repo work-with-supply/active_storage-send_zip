@@ -119,9 +119,9 @@ module ActiveStorage
         File.read(temp_file.path)
       ensure
         # close all ressources & remove temporary files
-        # temp_file.close
-        # temp_file.unlink
-        # FileUtils.rm_rf(folderpath)
+        temp_file.close
+        temp_file.unlink
+        FileUtils.rm_rf(folderpath)
       end
     end
   end
